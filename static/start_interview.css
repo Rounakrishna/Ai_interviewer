@@ -1,0 +1,80 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: #0000ff;
+    padding: 10px;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.instruction-box {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 50px;
+    margin-bottom: 100px;
+}
+
+.instruction {
+    color: #008000;
+    font-weight: bold;
+}
+
+.boxes {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+.output-box {
+    background-color: #fff;
+    height: 300px;
+    width: 60%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.right-box {
+    background-color: #008000;
+    height: 300px;
+    /* width: 1000px; */
+    border-radius: 5px;
+    width: 50%; /* Set width of the right-box */
+    /* height: 100%; Set height of the right-box */
+    float: right; /* Float it to the right */
+    position: relative; /* Position it relative to contain absolutely positioned children */
+}
+
+#videoElement {
+    width: 100%; /* Set video width to 100% of its container */
+    height: 100%; /* Set video height to 100% of its container */
+    object-fit: cover; /* Preserve aspect ratio and fill container */
+}
+
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    background-color: #008000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}

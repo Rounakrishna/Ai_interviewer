@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webcam Access</title>
+    <style>
+        #videoElement {
+            position: absolute; /* Set position to absolute */
+            top: 50%; /* Set top position to center vertically */
+            left: 50%; /* Set left position to center horizontally */
+            transform: translate(-50%, -50%); /* Center the element */
+        }
+    </style>
+</head>
+<body>
+    <h1>Webcam Access Example</h1>
+    <video id="videoElement" autoplay></video>
+    <script>
+        // Get access to the webcam
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then(function (stream) {
+                var videoElement = document.getElementById('videoElement');
+                videoElement.srcObject = stream;
+            })
+            .catch(function (error) {
+                console.error('Error accessing the webcam: ', error);
+            });
+    </script>
+</body>
+</html>

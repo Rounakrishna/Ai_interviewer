@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design</title>
+    <link rel="stylesheet" href="/static/start_interview.css">
+</head>
+<body>
+    <div class="container">
+        
+        <div class="instruction-box">
+            <span class="instruction">INSTRUCTION</span>
+        </div>
+        <div class="boxes">
+            <div class="output-box" id="outputBox">
+                {% if error %}
+                    <span>{{ error }}</span>
+                {% else %}
+                    <span class="output-text">{{ result.result }}</span>
+                {% endif %}
+            </div>
+            <div class="right-box">      
+                <video id="videoElement" autoplay></video>
+            </div>
+            
+        </div>
+        <div class="buttons">
+            <form method="post" action="/start_interview">
+                <button type="submit">Start</button>
+            </form>
+            <button id="stop">STOP</button>
+        </div>
+    </div>
+    <script src="/static/start_interview.js"></script>
+</body>
+</html>
